@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+    <link rel = "stylesheet" href = "{% static "css\showself.css" %}">
+</head>
+
+<body>
+<div class="row text-center vertical-middle-sm">
+    <h1>我的信息</h1>
+    <div class="row">
+        <div class="col-md-6" >
+            {% for Li in info %}
+                <div>
+                <img src = "{% static "default.jpg" %}" alt = "照片", height=100, width=100 />
+                </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>编号:&emsp;&emsp;&emsp;&emsp;&emsp;{{Li.sid}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>姓名:&emsp;&emsp;&emsp;&emsp;&emsp;{{Li.name}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>性别:&emsp;&emsp;&emsp;&emsp;&emsp;{{Li.sex}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>民族:&emsp;&emsp;&emsp;&emsp;&emsp;{{Li.nation}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>生日:&emsp;&emsp;&emsp;&emsp;&emsp;{{Li.birthday}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>政治面貌:&emsp;&emsp;&emsp;{{Li.politics}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>文化程度:&emsp;&emsp;&emsp;{{Li.education}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>婚姻状况:&emsp;&emsp;&emsp;{{Li.marriage}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>籍贯:&emsp;&emsp;&emsp;&emsp;&emsp;{{Li.hometown}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>身份证号:&emsp;&emsp;&emsp;{{Li.id_card}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>手机号码:&emsp;&emsp;&emsp;{{Li.phone}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>档案存放地:&emsp;&emsp;{{Li.place}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>户口所在地:&emsp;&emsp;{{Li.home_card}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>工作证号:&emsp;&emsp;&emsp;{{Li.num}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>入职日期:&emsp;&emsp;&emsp;{{Li.in_time}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>工作岗位:&emsp;&emsp;&emsp;{{Li.pos}}</span></div>
+            </div>
+                <div class="row">
+                <div class="col-md-4 text-right"><span>职务:&emsp;&emsp;&emsp;&emsp;&emsp;{{Li.duty}}</span></div>
+            </div>
+                <div class="row">
+                <div class="col-md-4 text-right"><span>上级员工编号:&emsp;{{Li.pre_num}}</span></div>
+            </div>
+                <div class="row">
+                <div class="col-md-4 text-right"><span>员工状态:&emsp;&emsp;&emsp;{{Li.status}}</span></div>
+            </div>
+                <div class="row">
+                <div class="col-md-4 text-right"><span>所在部门编号:&emsp;{{Li.dep.did}}</span></div>
+            </div>
+            <div class="row">
+                <a href="http://127.0.0.1:8000/update/">
+                    <button class="btn btn-primary btn-lg">编辑我的信息</button>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+ 
+</div>
+</body>
+</html>

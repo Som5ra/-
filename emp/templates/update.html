@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+    <link rel = "stylesheet" href = "{% static "css\showself.css" %}">
+    <link rel="stylesheet" href = "{% static "css\font-awesome.css" %}">
+</head>
+<body>
+<!--    <video src = "switzerland_alps_mountains_night_beautiful_landscape_windy_1920x1080.mp4", loop = "loop", autoplay = "autoplay"></video>-->
+    <div id = "login-box">
+        <h1>修改我的信息</h1>
+        <div class = "form">
+            <form method = "post">
+                {% csrf_token %}
+                <div class = "item">
+                      <i class="fa fa-user-circle" aria-hidden="true"></i>
+                      <input type = "text" name = "name" placeholder="姓名">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "sex" placeholder="性别">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "nation" placeholder="民族">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "date" name = "birthday" placeholder="生日">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "politics" placeholder="政治面貌">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "education" placeholder="学历">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "marriage" placeholder="婚姻状况">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "hometown" placeholder="籍贯">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "id_card" placeholder="身份证号">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "phone" placeholder="手机号码">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "place" placeholder="档案存放地">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "home_card" placeholder="户口所在地">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "num" placeholder="工作证号">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "date" name = "in_time" placeholder="入职日期">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "pos" placeholder="工作岗位">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "duty" placeholder="职务">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "pre_num" placeholder="上级员工编号">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <select name = "status">
+                        <option value="" style="color: #c2c2c2;">选择我的工作状态</option>
+                        <option value="1">在职</option>
+                        <option value="2">兼职</option>
+                        <option value="3">试用</option>
+                        <option value="4">离职</option>
+                        <option value="5">返聘</option>
+                        <option value="6">退休</option>
+                    </select>
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "dep_id" placeholder="所在部门编号">
+                </div>
+                <br>
+                <div>
+                    &emsp;&emsp;
+                    <input width="180px" class="btn btn-primary btn-lg" type="submit" value="Update my work info">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

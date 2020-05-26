@@ -1,0 +1,47 @@
+.cls1 {
+
+    margin: 0 auto;
+    margin-top: 12%;
+    text-align: center;
+    padding: 20px 50px;
+}
+
+body h1{
+    text-align: center;
+    margin-top: auto;
+}
+
+body {
+    text-indent: 20px;
+}
+
+#login-box .form .item input{
+    width: 180px;
+    font-size: 15px;
+    border: 1px solid;
+    padding: 5px 10px;
+    background: #ffffff00;
+}
+
+#login-box .form .item select{
+    width: 180px;
+    font-size: 15px;
+    border: 1px solid;
+    padding: 5px 10px;
+    background: #ffffff00;
+}
+#login-box #btn {
+    border: solid;
+    margin-top: 50px;
+    width: 150px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: bolder;
+    border-radius: 25px;
+}
+#login-box .form {
+    margin-top: 50px;
+}
+#login-box .form .item {
+    margin-top: 15px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel = "stylesheet" href = "{% static "css\login.css" %}">
+    <link rel="stylesheet" href = "{% static "css\font-awesome.css" %}">
+</head>
+<body>
+<!--    <video src = "switzerland_alps_mountains_night_beautiful_landscape_windy_1920x1080.mp4", loop = "loop", autoplay = "autoplay"></video>-->
+    <div id = "login-box">
+        <h1>员工人事管理系统</h1>
+        <div class = "form">
+            <form action = "/login/" method = "post">
+                {% if message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+                {% endif %}
+                {%  csrf_token %}
+                <div class = "item">
+                      <i class="fa fa-user-circle" aria-hidden="true"></i>
+                      <input type = "text" name = "name" placeholder="Username">
+                </div>
+                <div class = "item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type = "text" name = "password" placeholder="Password">
+                </div>
+                <input id = "btn" type="submit" value="登录">
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class = "register">
+            <a href = "http://127.0.0.1:8000/register">Have no account? Register</a>
+        </div>
+    </div>
+
+</body>
+</html>
